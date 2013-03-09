@@ -39,8 +39,6 @@ class Vl_auto_publish_date_acc {
 	{
 		$EE =& get_instance();
 		$theme_folder_url = defined('URL_THIRD_THEMES') ? URL_THIRD_THEMES : $this->EE->config->slash_item('theme_folder_url').'third_party/';
-		
-//rtrim( $this->EE->config->item( 'theme_folder_url' ), '/' )
 
 		if($EE->input->get('C') === 'content_publish' && $EE->input->get('M') === 'entry_form') {
 			$EE->cp->add_to_head('<script type="text/javascript" src="'. $theme_folder_url . $this->id . '/scripts/' . $this->id .'.min.js"></script>');
